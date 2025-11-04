@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos ativos da ONG Mãos Unidas, como se voluntariar e as formas de doação.">
+    <title>Projetos e Doações | ONG Mãos Unidas</title>
+    
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img src="assets/images/logo-maos-unidas.jpg" alt="Logotipo da ONG Mãos Unidas" width="50">
+                <h1>ONG Mãos Unidas</h1>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <nav aria-label="Navegação Principal" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos & Doações</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content-root">
+        <div class="container">
+            <section id="projetos-ativos" aria-labelledby="h2-projetos">
+                <h2 id="h2-projetos">Nossos Projetos de Impacto Social</h2>
+                <p>Conheça os pilares do nosso trabalho e como você pode participar de cada um.</p>
+                
+                <div class="grid-12-cols">
+                    
+                    <article class="projeto-card">
+                        <h3>Educação para o Futuro</h3>
+                        <span class="badge badge-educacao">Educação</span>
+                        <figure>
+                            <img src="assets/images/projeto-educacao.jpg" alt="Jovens em sala de aula com computadores." loading="lazy">
+                            <figcaption>Capacitação profissional e reforço escolar para jovens.</figcaption>
+                        </figure>
+                        <p>Oferecemos cursos técnicos e aulas de reforço para mais de 500 alunos anualmente.</p>
+                        <a href="#voluntariado" class="btn btn-primary">Ver Vagas</a>
+                    </article>
+
+                    <article class="projeto-card">
+                        <h3>Saúde e Bem-Estar Comunitário</h3>
+                        <span class="badge badge-saude">Saúde</span>
+                        <figure>
+                            <img src="assets/images/projeto-saude.jpg" alt="Profissionais de saúde em uma ação comunitária." loading="lazy">
+                            <figcaption>Atendimento básico e campanhas de prevenção em áreas carentes.</figcaption>
+                        </figure>
+                        <p>Foco na prevenção e acesso à informação de saúde para toda a família.</p>
+                        <a href="#doacao" class="btn btn-secondary">Apoiar Projeto</a>
+                    </article>
+                    
+                    <article class="projeto-card">
+                        <h3>Geração de Renda</h3>
+                        <span class="badge badge-educacao">Profissionalizante</span>
+                        <figure>
+                            <img src="assets/images/projeto-profissionalizante.jpg" alt="Profissionais de saúde em uma ação comunitária." loading="lazy">
+                            <figcaption>Acompanhamento e mentoria para novas profissionais.</figcaption>
+                        </figure>
+                        <p>Treinamento de costura e artesanato para mulheres da comunidade.</p>
+                        <a href="#voluntariado" class="btn btn-primary">Ver Vagas</a>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="voluntariado" aria-labelledby="h2-voluntariado">
+                <h2 id="h2-voluntariado">Torne-se Voluntário</h2>
+                <p>Sua paixão e suas habilidades são o combustível da nossa missão. Temos oportunidades para diversas áreas!</p>
+                
+                <ul>
+                    <li>Tutoria e Acompanhamento Escolar</li>
+                    <li>Gestão de Redes Sociais e Comunicação</li>
+                    <li>Suporte Administrativo</li>
+                </ul>
+                <a href="cadastro.html" class="btn btn-primary">Inscreva-se Agora</a>
+            </section>
+
+            <section id="doacao" aria-labelledby="h2-doacao">
+                <h2 id="h2-doacao">Apoie Nossas Causas</h2>
+                <p>Cada contribuição, grande ou pequena, garante que nossos projetos continuem ativos.</p>
+
+                <div class="formas-doacao">
+                    <dl>
+                        <dt>Doação Única</dt>
+                        <dd>Via Pix ou Cartão de Crédito.</dd>
+
+                        <dt>Doação Mensal Recorrente</dt>
+                        <dd>Assinatura mensal para garantir previsibilidade e sustentabilidade.</dd>
+                    </dl>
+                </div>
+                <a href="cadastro.html" class="btn btn-secondary">Realizar Doação</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ONG Mãos Unidas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="assets/js/spa.js" type="module"></script>
+    <script src="assets/js/forms.js" type="module"></script>
+    <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>
