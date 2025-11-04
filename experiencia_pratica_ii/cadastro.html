@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de cadastro para voluntários e doadores da ONG Mãos Unidas. Preencha seus dados para começar a ajudar.">
+    <title>Cadastro | ONG Mãos Unidas</title>
+    
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img src="assets/images/logo-maos-unidas.jpg" alt="Logotipo da ONG Mãos Unidas" width="50">
+                <h1>ONG Mãos Unidas</h1>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <nav aria-label="Navegação Principal" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos & Doações</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="formulario-principal" aria-labelledby="h2-cadastro">
+                <h2 id="h2-cadastro">Pré-Cadastro de Apoiador</h2>
+                <p>Seja voluntário ou doador. Seus dados são confidenciais e protegidos.</p>
+                
+                <div class="alert alert-error" role="alert">
+                    *Atenção: Todos os campos marcados são obrigatórios.
+                </div>
+
+                <form action="/api/processar-inscricao" method="POST">
+                    
+                    <fieldset>
+                        <legend>1. Dados Pessoais</legend>
+                        
+                        <div>
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome_completo" required minlength="5">
+                        </div>
+                        
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                        </div>
+
+                        <div>
+                            <label for="cpf">CPF (Formato: 000.000.000-00):</label>
+                            <input 
+                                type="text" 
+                                id="cpf" 
+                                name="cpf" 
+                                required 
+                                maxlength="14" 
+                                placeholder="000.000.000-00"
+                                pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                                title="Formato de CPF: 000.000.000-00"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="dataNasc">Data de Nascimento:</label>
+                            <input type="date" id="dataNasc" name="data_nascimento" required max="2007-01-01">
+                        </div>
+                        
+                        <div>
+                            <label for="telefone">Telefone (Formato: (99) 99999-9999):</label>
+                            <input 
+                                type="tel" 
+                                id="telefone" 
+                                name="telefone" 
+                                required 
+                                maxlength="15" 
+                                placeholder="(99) 99999-9999"
+                                pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                                title="Formato: (99) 99999-9999 ou (99) 9999-9999"
+                            >
+                        </div>
+                        
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>2. Informações de Endereço</legend>
+
+                        <div>
+                            <label for="cep">CEP (Formato: 00000-000):</label>
+                            <input 
+                                type="text" 
+                                id="cep" 
+                                name="cep" 
+                                required 
+                                maxlength="9" 
+                                placeholder="00000-000"
+                                pattern="[0-9]{5}-[0-9]{3}"
+                                title="Formato de CEP: 00000-000"
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="endereco">Endereço (Rua, Av, etc.):</label>
+                            <input type="text" id="endereco" name="endereco" required>
+                        </div>
+                        
+                        <div>
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" id="cidade" name="cidade" required>
+                        </div>
+                        
+                        <div>
+                            <label for="estado">Estado:</label>
+                            <select id="estado" name="estado" required>
+                                <option value="" disabled selected>Selecione um Estado</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="BA">Bahia</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>3. Tipo de Contribuição</legend>
+                        <p>Qual a sua intenção principal ao se cadastrar?</p>
+                        
+                        <div>
+                            <input type="radio" id="voluntario" name="interesse" value="voluntario" required>
+                            <label for="voluntario">Voluntariado</label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" id="doador" name="interesse" value="doador">
+                            <label for="doador">Doação e Apoio Financeiro</label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-primary">Enviar Inscrição</button>
+                    <button type="reset" class="btn">Limpar Dados</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ONG Mãos Unidas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
