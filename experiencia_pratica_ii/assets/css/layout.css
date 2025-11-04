@@ -92,12 +92,10 @@ footer p, footer a {
     display: none;
 }
 
-/* Regras Mobile: Menu Hamburguer Visível */
 .menu-hamburguer {
     display: flex;
 }
 
-/* Regras Mobile: Navegação Oculta por padrão */
 header nav { 
     position: absolute;
     top: 100%;
@@ -129,17 +127,11 @@ header nav {
     padding: var(--spacing-sm) 0;
 }
 
-/* ----------------------------------------------------- */
-/* MEDIA QUERIES */
-/* ----------------------------------------------------- */
-
 @media (min-width: 768px) {
-    /* CORREÇÃO: Usando !important para forçar o display: none */
     .menu-hamburguer { 
         display: none !important; 
     }
     
-    /* Regras de Navegação Desktop: Reseta Mobile */
     header nav { 
         display: block;
         position: static;
